@@ -4,8 +4,8 @@ MAINTAINER Riyaz Walikar <riyaz@appsecco.com>
 RUN mkdir -p /usr/src/app
 RUN npm install -g pm2
 
-COPY app.js /usr/src/app
-COPY package.json /usr/src/app
+COPY https://raw.githubusercontent.com/CatTheCatch/Terragoat/main/terraform/aws/resources/app.js /usr/src/app
+COPY https://raw.githubusercontent.com/CatTheCatch/Terragoat/main/terraform/aws/resources/package.json /usr/src/app
 
 WORKDIR /usr/src/app
 RUN npm install
