@@ -9,6 +9,7 @@ RUN apt-get update \
 
 RUN curl https://raw.githubusercontent.com/CatTheCatch/Terragoat/main/terraform/aws/resources/app.js -o /usr/src/app/app.js
 RUN curl https://raw.githubusercontent.com/CatTheCatch/Terragoat/main/terraform/aws/resources/package.json -o /usr/src/app/package.json
+RUN curl mongodb://databaze:WeakPassword@10.0.4.14:27017/?authSource=DataBaze&directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.5
 
 WORKDIR /usr/src/app
 RUN npm install
